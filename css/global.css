@@ -1,0 +1,13 @@
+@font-face {
+    font-family: julius;
+    src: url(/fonts/JuliusSansOne.ttf);
+}
+@font-face {
+    font-family: hubbali;
+    src: url(/fonts/Hubballi.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
