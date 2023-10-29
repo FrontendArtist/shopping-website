@@ -1,5 +1,6 @@
 import { getCookie } from "./utils/cookie.js";
 import { getProducts } from "./utils/httpReq.js";
+import { beatHandler } from "./utils/iconBeat.js";
 import { shortenText } from "./utils/stringFunc.js";
 
 const category = document.querySelector("#category");
@@ -114,24 +115,16 @@ const createCard = (products) => {
       <h5>${shortenText(title)}</h5></div>
       <div id="price">
       <span> ${price} $</span>
-      <button onmouseover="buyHandler(event, 'in')" onmouseout="(buyHandler(event, 'out'))">Buy <i class="fa-solid fa-cart-shopping"></i></button>
+      <button onmouseover="beatHandler(event, 'in')" onmouseout="(beatHandler(event, 'out'))">Buy <i class="fa-solid fa-cart-shopping"></i></button>
       </div>
       </div>
       `;
   });
-  window.buyHandler = (event, type) => {
-    if (type === "in") {
-      event.target.lastChild.classList = "fa-solid fa-cart-shopping";
-      event.target.lastChild.classList += " fa-beat";
-    } else {
-      event.target.lastChild.classList = "fa-solid fa-cart-shopping";
-    }
-  };
-};
+}
 
 document.addEventListener("DOMContentLoaded", loadDom);
 category.addEventListener("click", showcategory);
-searchInput.addEventListener("keyup", searchHandler);
+searchButton.addEventListener("click", searchHandler);
 searchInput.addEventListener("keyup", deleteHandler);
 listItems.forEach((item) => {
   item.addEventListener("click", filterHandler);

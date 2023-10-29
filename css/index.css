@@ -53,12 +53,14 @@ header a {
 }
 
 #search-box button {
-    width: 30px;
-    height: 30px;
+    position: relative;
+    left: -30px;
+    width: 26px;
+    height: 26px;
     background-color: #847fd3;
-    border: 2px solid white;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
+    border-left: 2px solid #847fd300;
 }
 
 #container {
@@ -73,7 +75,7 @@ header a {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 
@@ -136,13 +138,18 @@ ul {
     width: 200px;
     height: 300px;
     background-color: #847fd3;
-    margin: 10px 10px 0px 0px;
+    margin: 20px 20px 0px 0px;
     border-radius: 10px;
     border: 2px solid white;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.product-box:hover{
+    box-shadow: 0px 0px 10px 10px #9793e0 ;
+    scale: 102%;
+    transition: all 0.3s ease;
 }
 
 .product-box img {
@@ -153,20 +160,15 @@ ul {
 }
 
 .product-box button {
-    background: #847fd300;
+    background: #ffffff00;
     padding: 5px;
     border: 1px solid white;
     border-radius: 5px;
     color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
-
-
 }
 
-.product-box button:hover {
-    background-color: #847fd3;
-}
 
 .product-box #rating {
     display: flex;
@@ -190,7 +192,9 @@ ul {
     border-top-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
     animation: rotation 1s infinite linear;
-    margin-top: 150px;
+    position: relative;
+    left: 50%;
+    top: 150px;
 }
 
 @keyframes rotation {
