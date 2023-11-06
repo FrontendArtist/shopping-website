@@ -91,7 +91,7 @@ const filterHandler = (event) => {
 };
 
 const deleteHandler = (event) => {
-  console.log(event);
+
   if (event.key === "Backspace" && searchInput.value === "") {
     createCard(allProducts);
     listItems.forEach((item) => {
